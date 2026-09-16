@@ -18,6 +18,17 @@ npm run dev
 
 Open the URL printed by Vite (normally `http://localhost:5173`). Create a production bundle with `npm run build`.
 
+## Deploy to GitHub Pages
+
+The Vite production build uses `/Opportunity-Tracker/` as its base path. Pushes to
+`main` automatically build and deploy the app with the GitHub Pages workflow. The
+workflow can also be started manually from the repository's **Actions** tab.
+
+In the repository settings, set **Pages → Build and deployment → Source** to
+**GitHub Actions**. After a successful deployment, the app is available at:
+
+`https://<github-username>.github.io/Opportunity-Tracker/`
+
 ## MVP behavior
 
 - Six opportunity categories with realistic seeded examples
