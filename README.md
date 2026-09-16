@@ -23,7 +23,12 @@ Open the URL printed by Vite (normally `http://localhost:5173`). Create a produc
 The Vite build uses `/Opportunity-Tracker/` as its production base path. The
 `Deploy to GitHub Pages` workflow builds and deploys the app whenever a commit is
 pushed to `main`; it can also be started manually from the repository's Actions
-tab. In the repository settings, set **Pages → Source** to **GitHub Actions**.
+tab. The workflow verifies that the generated assets use the repository subpath
+before it uploads the `dist` directory. In the repository settings, set
+**Pages → Source** to **GitHub Actions**.
+
+The production output also contains a `.nojekyll` marker so GitHub Pages serves
+all Vite-generated files directly without Jekyll processing.
 
 The deployed app will be available at:
 
